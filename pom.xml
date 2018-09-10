@@ -22,6 +22,14 @@
     <modules>
         <module>shopping-eureka</module>
         <module>shopping-gateway</module>
+        <module>shopping-auth-service</module>
+        <module>shopping-product-service</module>
+        <module>shopping-order-service</module>
+        <module>shopping-user-service</module>
+        <module>shopping-pay-service</module>
+        <module>shopping-config</module>
+        <module>shopping-sleuth</module>
+        <module>shopping-common</module>
     </modules>
 
     <properties>
