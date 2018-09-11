@@ -1,0 +1,13 @@
+server:
+  port: 10060
+
+# 本服务名称
+spring:
+  application:
+    name: shopping-pay-service
+
+# 服务注册
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10010/eureka/

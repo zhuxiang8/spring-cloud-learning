@@ -1,5 +1,5 @@
 server:
-  port: 8761
+  port: 10020
 
 # 本服务名称
 spring:
@@ -10,11 +10,15 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8760/eureka/
+      defaultZone: http://localhost:10010/eureka/
 
+# 下面整个树都非必须，如果不配置，将默认使用 http://GATEWAY:GATEWAY_PORT/想要访问的Eureka服务id的小写/** 路由到：http://想要访问的Eureka服务id的小写:该服务端口/**
 # 路由配置
-#zuul:
-#  routes:
-#    demo-feign-freeservice:
-#      path: /api-service/**
+zuul:
+  ignoredServices: '*'
+  routes:
+    auth:                                 # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
+      path: /auth/**                      # 想要映射到的路径
+      sensitiveHeaders: Cookie,Set-Cookie # 添加头部敏感信息不转发，此配置显示设置Authorization 是可以被转发的
+      service-id: shopping-auth-service   # Eureka中的serviceId
 

@@ -22,6 +22,14 @@
     <modules>
         <module>shopping-eureka</module>
         <module>shopping-gateway</module>
+        <module>shopping-auth-service</module>
+        <module>shopping-product-service</module>
+        <module>shopping-order-service</module>
+        <module>shopping-user-service</module>
+        <module>shopping-pay-service</module>
+        <module>shopping-config</module>
+        <module>shopping-sleuth</module>
+        <module>shopping-common</module>
     </modules>
 
     <properties>
@@ -29,6 +37,9 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <spring-cloud.version>Finchley.SR1</spring-cloud.version>
+
+        <lombok.version>1.18.2</lombok.version>
+        <mybatis-plus.version>2.3.1</mybatis-plus.version>
     </properties>
 
     <dependencies>
@@ -83,11 +94,11 @@
             <!--<artifactId>mysql-connector-java</artifactId>-->
             <!--<scope>runtime</scope>-->
         <!--</dependency>-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.projectlombok</groupId>-->
+            <!--<artifactId>lombok</artifactId>-->
+            <!--<optional>true</optional>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
