@@ -30,6 +30,7 @@
         <module>shopping-config</module>
         <module>shopping-sleuth</module>
         <module>shopping-common</module>
+        <module>shopping-product-es-service</module>
     </modules>
 
     <properties>

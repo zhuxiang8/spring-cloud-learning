@@ -1,0 +1,19 @@
+server:
+  port: 10050
+
+# 服务注册
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10010/eureka/
+# elasticsearch
+spring:
+  application:
+    name: shopping-product-es-service
+  data:
+    elasticsearch:
+      cluster-name: front-es-cluster
+      cluster-nodes: 192.168.0.151:9200,192.168.0.152:9200,192.168.0.153:9200
+#      cluster-nodes: 140.143.241.174:9300
+      repositories:
+        enabled: true
