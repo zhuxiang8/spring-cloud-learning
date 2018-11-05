@@ -1,4 +1,4 @@
-package com.zhuxiang.shopping.entity;
+package com.zhuxiang.shopping;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

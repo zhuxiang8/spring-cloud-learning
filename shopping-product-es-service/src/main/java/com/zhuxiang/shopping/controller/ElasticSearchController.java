@@ -1,11 +1,9 @@
 package com.zhuxiang.shopping.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.zhuxiang.shopping.entity.Employee;
+import com.zhuxiang.shopping.Employee;
 import com.zhuxiang.shopping.repository.EmployeeRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.elasticsearch.index.query.QueryBuilder;
-import org.elasticsearch.index.query.QueryBuilders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -45,7 +43,7 @@ public class ElasticSearchController {
         Long queryStartTime = System.currentTimeMillis();
         query();
         Long queryEndTime = System.currentTimeMillis();
-//        log.info("查询ES数据花费时间={}", queryEndTime - queryStartTime);
+        log.info("查询ES数据花费时间={}", queryEndTime - queryStartTime);
         return "success";
     }
 

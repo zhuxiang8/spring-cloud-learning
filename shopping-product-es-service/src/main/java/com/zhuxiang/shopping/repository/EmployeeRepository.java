@@ -1,6 +1,6 @@
 package com.zhuxiang.shopping.repository;
 
-import com.zhuxiang.shopping.entity.Employee;
+import com.zhuxiang.shopping.Employee;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Component;
 
